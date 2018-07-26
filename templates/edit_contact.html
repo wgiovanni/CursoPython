@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+
+{% block body %}
+	<form method="post">
+		<fieldset>
+			<legend>Editar contacto</legend>
+
+			<!--label for="id">Id</label>
+			<input id="id" type="text" name="id" value='{{ contact.id }}'-->
+			
+			<label for="name">Nombre</label>
+			<input id="name" type="text" name="name" value='{{ contact.name }}'>
+
+			<label for="phone">Teléfono</label>
+			<input id="phone" type="text" name="phone" value='{{ contact.phone }}'>
+
+			<label for="name">Email</label>
+			<input id="email" type="text" name="email" value='{{ contact.email }}'>
+
+			<button type="submit" name="button">Guardar</button>
+
+		</fieldset>
+	</form>
+
+	<p>
+		<a href="/">Regresar</a>
+	</p>
+{% endblock %}

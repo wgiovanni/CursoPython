@@ -1,0 +1,24 @@
+{% extends 'index.html' %}
+{% block body %}
+<h3>Contactos</h3>
+<table class="table">
+	<thead>
+		<tr>
+			<th scope="col">Nombre</th>
+			<td></td>
+		</tr>
+	</thead>
+	<tbody>
+	{% for contact in contacts %}
+		<tr>
+			<td scope="row">{{ contact.name }}</td>
+			<td class="text-right">
+				<div class="row">
+					<a class="btn btn-primary pull-right" href="/contacts/{{ contact.id }}">Detalle</a>
+				</div>
+			</td>
+		</tr>
+	{% endfor %}
+	</tbody>
+</table>
+{% endblock %}
